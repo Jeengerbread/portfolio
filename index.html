@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css"> <!-- link to style sheet  -->
+    <title>Welcome to my Lair</title> <!-- Your Name/Website Name Here -->
+</head> 
+	
+<body>
+	<header>
+		<ul>
+			<li><a href="work.html">Projects</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="resume.html">Resume</a></li>
+		</ul>
+	</header>
+	
+	<main>
+	<button onclick="one()">HELLLO</button>
+	<button onclick="two()">2</button>
+	<button onclick="four()">4</button>
+	
+		
+	<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a "loop" variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.flex = "100%"; 
+    }
+}
+
+// Two images side by side
+function two() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.flex = "50%"; 
+    }
+}
+
+// Four images side by side
+function four() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.flex = "25%"; 
+    }
+}
+</script>
+	
+	<div class="row"> 
+  <div class="column">
+    <img alt="NA" src="images/I Say No.png" width="500px">
+    <img alt="NA" src="images/Glitch.jpg" width="500px">
+    <img alt="NA" src="images/Composite.png" width="500px">
+    <img src="paris.jpg">
+    <img src="nature.jpg">
+    <img src="mist.jpg">
+    <img src="paris.jpg">
+  </div>
+  <div class="column">
+    <img src="underwater.jpg">
+    <img src="ocean.jpg">
+    <img src="wedding.jpg">
+    <img src="mountainskies.jpg">
+    <img src="rocks.jpg">
+    <img src="underwater.jpg">
+  </div> 
+  <div class="column">
+    <img src="wedding.jpg">
+    <img src="rocks.jpg">
+    <img src="falls2.jpg">
+    <img src="paris.jpg">
+    <img src="nature.jpg">
+    <img src="mist.jpg">
+    <img src="paris.jpg">
+  </div>
+  <div class="column">
+    <img src="underwater.jpg">
+    <img src="ocean.jpg">
+    <img src="wedding.jpg">
+    <img src="mountainskies.jpg">
+    <img src="rocks.jpg">
+    <img src="underwater.jpg">
+  </div>
+</div>
+	</main>
+	
+	
+	<footer>
+		<p> &copy; Matteo Marx 2018</p>
+	</footer>
+</body>
+	
+</html>
