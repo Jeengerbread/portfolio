@@ -1,26 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');/*look for new font family at fonts.google.com */
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
+* {
+    box-sizing: border-box;
 }
 
-/* Create two equal columns that sits next to each other */
-.column {
-  flex: 50%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
-
-main{
-	text-align: center;
-	margin-top: 100px;
-	
+body{
+	margin: 0;
 }
 
 header {
@@ -31,7 +16,7 @@ header {
 	position:fixed;
 	font-weight:800;
 	color:#fff;
-	z-index: 3; /* to bring the layer on top for the arrangement */
+	z-index: 3;
 }
 
 header ul {
@@ -49,6 +34,33 @@ header ul li {
 header ul li a { /* for links we need additional styling */
 	color:#fff;
 	text-decoration: none;
+}
+
+main{
+	text-align: center;
+	margin-top: 100px;
+}
+	
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+
+}
+
+.column {
+	-ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+	padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+	width: 100%;
 }
 
 footer {
