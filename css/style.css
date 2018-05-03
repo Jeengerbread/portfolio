@@ -21,14 +21,14 @@ header {
 
 header ul {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 header ul li {
 	list-style-type:none;
 	display: list-item;
 	line-height: 70px;
-	padding-left: 150px;
+	padding-left: 300px;
 }
 
 header ul li a { /* for links we need additional styling */
@@ -38,7 +38,7 @@ header ul li a { /* for links we need additional styling */
 
 main{
 	text-align: center;
-	margin-top: 100px;
+	margin-top: 70px;
 }
 	
 .row {
@@ -52,7 +52,7 @@ main{
 
 .column {
 	-ms-flex: 0 0 50%;
-    flex: 0 0 50%;
+    flex: 0 0 33.3%;
 	padding: 0 4px;
 }
 
@@ -75,5 +75,6 @@ footer p{
 	padding: 35px 0;
 	color: #fff;
 	font-weight: 700;
+	font-size:10px;
 }	
 
