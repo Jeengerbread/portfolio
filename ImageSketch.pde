@@ -1,13 +1,6 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Code_Art</title>
-	<script type="text/javascript" src="processing.js"></script>
-</head>
+/*Created by Matteo Marx with the help of Processing*/
 
-<body>
-	<script type="PImage background, outlaw1, outlaw2, outlaw3, horsie, gameover;
+PImage background, outlaw1, outlaw2, outlaw3, horsie, gameover;
 
 boolean outlaw1Draw = false;
 boolean outlaw2Draw = false;
@@ -150,8 +143,4 @@ private boolean timedBoolean4() {
             return false;
         
         return true;
-}"></script>
-	
-	<canvas> </canvas>
-</body>
-</html>
+}
