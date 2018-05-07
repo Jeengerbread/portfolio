@@ -1,4 +1,4 @@
-/* @pjs preload= "saloon.png, outlaw1.png, outlaw2.png, outlaw3.png, horsie.png, gameover.jpg"; */
+/* @pjs preload= "/data/saloon.png, /data/outlaw1.png, /data/outlaw2.png, /data/outlaw3.png, /data/horsie.png, /data/gameover.jpg"; */
 PImage background, outlaw1, outlaw2, outlaw3, horsie, gameover;
 
 boolean outlaw1Draw = false;
