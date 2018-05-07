@@ -1,4 +1,4 @@
-/* @pjs preload="saloon.png,outlaw1.png,outlaw2.png,outlaw3.png,horsie.png,gameover.png"; */
+/* @pjs preload="saloon.png,outlaw1.png,outlaw2.png,outlaw3.png,horsie.png,gameover.jpg"; */
 
 PImage background, outlaw1, outlaw2, outlaw3, horsie, gameover;
 
