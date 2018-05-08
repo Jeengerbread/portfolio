@@ -1,9 +1,3 @@
-<!doctype html>
-<html>
-<head>
-	<title>Code_Art</title>
-	<script src="processing.js"></script>
- <script type="text/processing" data-processing-target="pjs">
 /* @pjs preload="saloon.png,outlaw1.png,outlaw2.png,outlaw3.png,horsie.png,gameover.jpg"; */
 
 PImage background, outlaw1, outlaw2, outlaw3, horsie, gameover;
@@ -150,14 +144,3 @@ private boolean timedBoolean4() {
         
         return true;
 }
- </script>
-	
-</head>
-
-<body>
-	
-	<canvas id="pjs"> </canvas>
-		
-</body>
-</html>
-
