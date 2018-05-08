@@ -6,8 +6,6 @@
  <script type="text/processing" data-processing-target="pjs">
 /* @pjs preload="saloon.png,outlaw1.png,outlaw2.png,outlaw3.png,horsie.png,gameover.jpg"; */
 
-var system = require('system');
-
 PImage background, outlaw1, outlaw2, outlaw3, horsie, gameover;
 
 boolean outlaw1Draw = false;
@@ -95,7 +93,7 @@ void mousePressed() {
 
 private long lastTrueTimeOutlaw1;
 private boolean timedBoolean1() {
-        long now= System.currentTimeMillis();
+        long now= Date.now();
         if(!outlaw1Draw){ 
             lastTrueTimeOutlaw1=now;
             outlaw1Draw = true;
@@ -111,7 +109,7 @@ private boolean timedBoolean1() {
 
 private long lastTrueTimeOutlaw2;
 private boolean timedBoolean2() {
-        long now= System.currentTimeMillis();
+        long now= Date.now();
         if(!outlaw2Draw){ 
             lastTrueTimeOutlaw2=now;
             outlaw2Draw = true;
@@ -127,7 +125,7 @@ private boolean timedBoolean2() {
 
 private long lastTrueTimeOutlaw3;
 private boolean timedBoolean3() {
-        long now= System.currentTimeMillis();
+        long now= Date.now();
         if(!outlaw3Draw){ 
             lastTrueTimeOutlaw3=now;
             outlaw3Draw = true;
@@ -143,7 +141,7 @@ private boolean timedBoolean3() {
 
 private long lastTrueTimeHorsie;
 private boolean timedBoolean4() {
-        long now= System.currentTimeMillis();
+        long now= Date.now();
         if(!horsieDraw){ 
             lastTrueTimeHorsie=now;
             horsieDraw = true;
