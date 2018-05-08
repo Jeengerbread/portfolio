@@ -43,8 +43,6 @@ h1 {
 	margin-bottom: 0px;
 	display: flex;
 	text-align: center;
-
-  	/* This centers our sketch horizontally. */
  	justify-content: center;
 }
 
