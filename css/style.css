@@ -37,6 +37,7 @@ header ul li a { /* for links we need additional styling */
 }
 
 main{
+	background-color: #00292B;
 	text-align: center;
 	margin-top: 70px;
 }
