@@ -29,19 +29,24 @@ void draw() {
   image(background, 0, 0, 1000, 800);
   if (timedBoolean1() == false) {
     image(outlaw1, 235, 475, 60, 98.5);
+    redraw();
   }
   if (timedBoolean2() == false) {
     image(outlaw2, 700, 495, 88, 98);
+    redraw();
   }
   if (timedBoolean3() == false) {
     image(outlaw3, 240, 280, 66, 98);
+    redraw();
   }
   if (timedBoolean4() == false) {
     image(horsie, 60, 460, 164, 300);
+    redraw();
   }
   
   if (gameOver) {
     image(gameover, 0, 0, 1000, 800);
+    redraw();
   }
   fill(255, 0, 0);
   ellipse(mouseX, mouseY, 10, 10);
@@ -60,22 +65,26 @@ void mousePressed() {
     //outlaw1 killed
     outlaw1Draw = false;
     score++;
+    redraw();
   } 
   if (mouseX > 700 && mouseX < 788 && mouseY > 495 && mouseY < 593 ) {
     //outlaw2 killed
     outlaw2Draw = false;
     score++;
+    redraw();
   }
   if (mouseX > 240 && mouseX < 306 && mouseY > 280 && mouseY < 378 ) {
     //outlaw3 killed
     outlaw3Draw = false;
     score++;
+    redraw();
   } 
   if (mouseX > 60 && mouseX < 180 && mouseY > 460 && mouseY < 760 ) {
     //horsie killed :(
     horsieDraw = false;
     gameOver = true;
     score = 0;
+    redraw();
   }
   if (gameOver) {
     if (mouseX > 380 && mouseX < 620 && mouseY > 430 && mouseY < 500 ){
