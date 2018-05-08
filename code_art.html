@@ -32,7 +32,6 @@ void setup() {
 }
 
 void draw() {
-  background(255);
   image(background, 0, 0, 1000, 800);
   if (timedBoolean1() == false) {
     image(outlaw1, 235, 475, 60, 98.5);
@@ -67,33 +66,28 @@ void mousePressed() {
     //outlaw1 killed
     outlaw1Draw = false;
     score++;
-	redraw();
   } 
   if (mouseX > 700 && mouseX < 788 && mouseY > 495 && mouseY < 593 ) {
     //outlaw2 killed
     outlaw2Draw = false;
     score++;
-	redraw();
   }
   if (mouseX > 240 && mouseX < 306 && mouseY > 280 && mouseY < 378 ) {
     //outlaw3 killed
     outlaw3Draw = false;
     score++;
-	redraw();
   } 
   if (mouseX > 60 && mouseX < 180 && mouseY > 460 && mouseY < 760 ) {
     //horsie killed :(
     horsieDraw = false;
     gameOver = true;
     score = 0;
-	redraw();
   }
   if (gameOver) {
     if (mouseX > 380 && mouseX < 620 && mouseY > 430 && mouseY < 500 ){
       gameOver = false;
-      redraw();
+    
     }
-	redraw();
   }
 }
 
@@ -103,13 +97,13 @@ private boolean timedBoolean1() {
         if(!outlaw1Draw){ 
             lastTrueTimeOutlaw1=now;
             outlaw1Draw = true;
-			redraw();
+	
             return true;
         }
 
         if (lastTrueTimeOutlaw1+3700<now)
             return false;
-        redraw();
+      
         return true;
 }
 
@@ -119,13 +113,13 @@ private boolean timedBoolean2() {
         if(!outlaw2Draw){ 
             lastTrueTimeOutlaw2=now;
             outlaw2Draw = true;
-			redraw();
+	
             return true;
         }
 
         if (lastTrueTimeOutlaw2+3000<now)
             return false;
-        redraw();
+      
         return true;
 }
 
@@ -135,13 +129,13 @@ private boolean timedBoolean3() {
         if(!outlaw3Draw){ 
             lastTrueTimeOutlaw3=now;
             outlaw3Draw = true;
-			redraw();
+	
             return true;
         }
 
         if (lastTrueTimeOutlaw3+5400<now)
             return false;
-        redraw();
+      
         return true;
 }
 
@@ -151,13 +145,13 @@ private boolean timedBoolean4() {
         if(!horsieDraw){ 
             lastTrueTimeHorsie=now;
             horsieDraw = true;
-			redraw();
+	
             return true;
         }
 
         if (lastTrueTimeHorsie+6400<now)
             return false;
-        redraw();
+      
         return true;
 }
  </script>
