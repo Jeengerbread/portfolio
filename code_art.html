@@ -35,24 +35,19 @@ void draw() {
   image(background, 0, 0, 1000, 800);
   if (timedBoolean1() == false) {
     image(outlaw1, 235, 475, 60, 98.5);
-	redraw();
   }
   if (timedBoolean2() == false) {
     image(outlaw2, 700, 495, 88, 98);
-	redraw();
   }
   if (timedBoolean3() == false) {
     image(outlaw3, 240, 280, 66, 98);
-	redraw();
   }
   if (timedBoolean4() == false) {
     image(horsie, 60, 460, 164, 300);
-	redraw();
   }
   
   if (gameOver) {
     image(gameover, 0, 0, 1000, 800);
-	redraw();
   }
   fill(255, 0, 0);
   ellipse(mouseX, mouseY, 10, 10);
@@ -107,12 +102,13 @@ private boolean timedBoolean1() {
         if(!outlaw1Draw){ 
             lastTrueTimeOutlaw1=now;
             outlaw1Draw = true;
+			redraw();
             return true;
         }
 
         if (lastTrueTimeOutlaw1+3700<now)
             return false;
-        
+        redraw();
         return true;
 }
 
@@ -122,12 +118,13 @@ private boolean timedBoolean2() {
         if(!outlaw2Draw){ 
             lastTrueTimeOutlaw2=now;
             outlaw2Draw = true;
+			redraw();
             return true;
         }
 
         if (lastTrueTimeOutlaw2+3000<now)
             return false;
-        
+        redraw();
         return true;
 }
 
@@ -137,12 +134,13 @@ private boolean timedBoolean3() {
         if(!outlaw3Draw){ 
             lastTrueTimeOutlaw3=now;
             outlaw3Draw = true;
+			redraw();
             return true;
         }
 
         if (lastTrueTimeOutlaw3+5400<now)
             return false;
-        
+        redraw();
         return true;
 }
 
@@ -152,12 +150,13 @@ private boolean timedBoolean4() {
         if(!horsieDraw){ 
             lastTrueTimeHorsie=now;
             horsieDraw = true;
+			redraw();
             return true;
         }
 
         if (lastTrueTimeHorsie+6400<now)
             return false;
-        
+        redraw();
         return true;
 }
  </script>
