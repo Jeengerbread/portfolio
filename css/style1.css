@@ -7,8 +7,12 @@ html, body {
 }
 
 body {
+	
+  background-color: black;
   margin: 0;
   display: flex;
+	
+	text-align: center;
 
   /* This centers our sketch horizontally. */
   justify-content: center;
