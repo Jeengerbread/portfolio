@@ -15,18 +15,18 @@ void setup() {
   size (1000, 800);
   strokeWeight(0);
   noCursor();
-  background = loadImage("saloon.png");
-  image(background, 0, 0, 1000, 800);
-  outlaw1 = loadImage("outlaw1.png");
-  outlaw2 = loadImage("outlaw2.png");
-  outlaw3 = loadImage("outlaw3.png");
-  horsie = loadImage("horsie.png");
-  gameover = loadImage("gameover.jpg");
+  background = requestImage("saloon.png");
+  outlaw1 = requestImage("outlaw1.png");
+  outlaw2 = requestImage("outlaw2.png");
+  outlaw3 = requestImage("outlaw3.png");
+  horsie = requestImage("horsie.png");
+  gameover = requestImage("gameover.jpg");
   
 }
 
 void draw() {
   background(255);
+  image(background, 0, 0, 1000, 800);
   if (timedBoolean1() == false) {
     image(outlaw1, 235, 475, 60, 98.5);
   }
