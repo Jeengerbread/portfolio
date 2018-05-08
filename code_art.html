@@ -6,6 +6,8 @@
  <script type="text/processing" data-processing-target="pjs">
 /* @pjs preload="saloon.png,outlaw1.png,outlaw2.png,outlaw3.png,horsie.png,gameover.jpg"; */
 
+var system = require('system');
+
 PImage background, outlaw1, outlaw2, outlaw3, horsie, gameover;
 
 boolean outlaw1Draw = false;
@@ -22,12 +24,12 @@ void setup() {
   size (1000, 800);
   strokeWeight(0);
   noCursor();
-  background = requestImage("saloon.png");
-  outlaw1 = requestImage("outlaw1.png");
-  outlaw2 = requestImage("outlaw2.png");
-  outlaw3 = requestImage("outlaw3.png");
-  horsie = requestImage("horsie.png");
-  gameover = requestImage("gameover.jpg");
+  background = loadImage("saloon.png");
+  outlaw1 = loadImage("outlaw1.png");
+  outlaw2 = loadImage("outlaw2.png");
+  outlaw3 = loadImage("outlaw3.png");
+  horsie = loadImage("horsie.png");
+  gameover = loadImage("gameover.jpg");
   
 }
 
