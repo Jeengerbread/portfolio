@@ -19,13 +19,14 @@
 	<main>
 		<div class="row"> 
   			<div class="column">
-				<a href="net_art.html" target="_blank"><img alt="NA" src="images/isayno.png"></a>
-				<a href="glitch_art.html" target="_blank"><img alt="NA" src="images/Glitch.jpg"></a>
-				<a href="composite_art.html" target="_blank"><img alt="NA" src="images/Composite.png"></a>
-				<a href="video_art.html" target="_blank"><img alt="NA" src="images/Miata Kart.png"></a>
+				<img onclick="on()" alt="NA" src="images/isayno.png"></a>
+				
+				<a href="glitch_art.html" target="_self"><img alt="NA" src="images/Glitch.jpg"></a>
+				<a href="composite_art.html" target="_self"><img alt="NA" src="images/Composite.png"></a>
+				<a href="video_art.html" target="_self"><img alt="NA" src="images/Miata Kart.png"></a>
   			</div>
   			<div class="column">
-   				<a href="code_art.html" target="_blank"><img alt="NA" src="images/Outlaws.png"></a>
+   				<a href="code_art.html" target="_self"><img alt="NA" src="images/Outlaws.png"></a>
 	  			<img alt="NA" src="images/Composite.png">
 	  			<img alt="NA" src="images/Composite.png">
 	  			<img alt="NA" src="images/Composite.png">
@@ -39,6 +40,21 @@
 		</div>
 	</main>
 	
+	<div id="overlay" onclick="off()">
+  		<div id="text">
+			<iframe width="1280" height="720" src="net_art.html"></iframe>
+		</div>
+	</div>
+	
+	<script>
+		function on() {
+    		document.getElementById("overlay").style.display = "block";
+		}
+
+		function off() {
+    		document.getElementById("overlay").style.display = "none";
+		}
+	</script>
 	
 	<footer>
 		<p> &copy; Matteo Marx 2018</p>
