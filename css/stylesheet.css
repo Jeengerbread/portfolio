@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* CSS Document */
+
+header {
+	background-color: #000;
+	top: 0;
+	width: 100%;
+	height: 70px;
+	position:fixed;
+	font-weight:800;
+	color:#fff;
+	z-index: 3;
+}
+
+header ul {
+	display: flex;
+	justify-content: center;
+}
+
+header ul li {
+	list-style-type:none;
+	display: list-item;
+	line-height: 70px;
+	padding-left: 300px;
+}
+
+header ul li a {
+	color:#fff;
+	text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+	color:ghostwhite;
+}
+body {
+	height: 800px;
+    background-color: black;
+	margin-top: 180px;
+}
+
+.box{
+    display: none;
+    padding: 0;
+    overflow: hidden;
+	width: 100%;
+	border: 0;
+	text-align: center;
+}
+
+a:hover + .box,.box:hover{
+    display: block;
+    position: absolute;
+    top: 380px;
+    z-index: 100;
+}
+
+a:hover{
+	color: orangered;
+}
+
+.Bonus{
+	position: absolute;
+	text-align: bottom,right;
+	color:black;
+}
+
+h1,h2,h3 {	
+	line-height: 1.5;
+	text-align: center;
+	font-size: 18px;
+	text-decoration: none;
+	color: ghostwhite;
+}
+h6{
+	font-size: 14px;
+	text-align: center;
+	top: 480px;
+	color:orangered;
+}
+
+#heading {text-align: center;}
+
+footer {
+	background-color: #000;
+	width: 100%;
+	height: auto;
+	padding-top: 0px;
+	text-align: center;
+}
+
+footer p{
+	padding: 35px 0;
+	color: #fff;
+	font-weight: 700;
+	font-size:10px;
+}	
