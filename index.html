@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css"> <!-- link to style sheet  -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Welcome to my Lair</title> <!-- Your Name/Website Name Here -->
 </head> 
 	
@@ -16,17 +17,41 @@
 		</ul>
 	</header>
 	
+	
+	<div id="overlayVideo" onclick="offYVideo()">
+  		<div id="video_art">
+			<iframe id="video" width="1000" height="800" src="https://www.youtube.com/embed/ncq-P3y_jtQ?&enablejsapi=1&version=3&html5=1" allowfullscreen="true" allowscriptaccess="always" frameborder="0"></iframe>
+		</div>
+	</div>
+	
+	<div id="overlayGame" onclick="offGame()">
+  		<div id="code_art">
+			<iframe id="game" width="1000" height="800" src="about:blank" frameborder="0"></iframe>
+		</div>
+	</div>
+	
+	<div id="overlayGlitch" onclick="offGlitch()">
+  		<div id="glitch_art">
+			<iframe id="glitch" width="1000" height="800" src="images/Glitch_full.png" frameborder="0"></iframe>
+		</div>
+	</div>
+	
+	<div id="overlayISayNo" onclick="offISayNo()">
+  		<div id="net_art">
+			<iframe id="isayno" width="1200" height="800" src="about:blank" frameborder="0"></iframe>
+		</div>
+	</div>
+	
 	<main>
 		<div class="row"> 
   			<div class="column">
-				<img onclick="on()" alt="NA" src="images/isayno.png">
-				
-				<a href="glitch_art.html" target="_self"><img alt="NA" src="images/Glitch.jpg"></a>
+				<img onclick="onISayNo()" alt="NA" src="images/isayno.png"/>
+				<img onclick="onYVideo()" alt="NA" src="images/Miata Kart.png"/>
 				<a href="composite_art.html" target="_self"><img alt="NA" src="images/Composite.png"></a>
-				<a href="video_art.html" target="_self"><img alt="NA" src="images/Miata Kart.png"></a>
+				<img onclick="onGlitch()" alt="NA" src="images/Glitch.jpg"/>
   			</div>
   			<div class="column">
-   				<a href="code_art.html" target="_self"><img alt="NA" src="images/Outlaws.png"></a>
+				<img onclick="onGame()" alt="NA" src="images/Outlaws.png"/>
 	  			<img alt="NA" src="images/Composite.png">
 	  			<img alt="NA" src="images/Composite.png">
 	  			<img alt="NA" src="images/Composite.png">
@@ -40,20 +65,80 @@
 		</div>
 	</main>
 	
-	<div id="overlay" onclick="off()">
-  		<div id="text">
-			<iframe width="1280" height="720" src="net_art.html"></iframe>
-		</div>
-	</div>
-	
 	<script>
-		function on() {
-    		document.getElementById("overlay").style.display = "block";
+		// https://developers.google.com/youtube/iframe_api_reference
+
+		// global variable for the player
+		var player;
+		var ifrmame1;
+
+		// this function gets called when API is ready to use
+		function onYouTubePlayerAPIReady() {
+  			// create the global player from the specific iframe (#video)
+  			player = new YT.Player('video', {
+    			events: {
+      				// call this function when player is ready to use
+      				'onReady': onPlayerReady
+    			}
+  			});
 		}
 
-		function off() {
-    		document.getElementById("overlay").style.display = "none";
+		function onPlayerReady(event) {
+  			// bind events
+  			var playButton = document.getElementById("play-button");
+  			video.addEventListener("click", function() {
+    			player.playVideo();
+  			});
+  
+  			var pauseButton = document.getElementById("pause-button");
+  			video.addEventListener("click", function() {
+    			player.pauseVideo();
+  			});
+  		}
+
+		// Inject YouTube API script
+		var tag = document.createElement('script');
+		tag.src = "http://www.youtube.com/player_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+		
+		//content overlay functions
+		function onYVideo() {
+    		document.getElementById("overlayVideo").style.display = "block";
+			player.playVideo();
 		}
+
+		function offYVideo() {
+    		document.getElementById("overlayVideo").style.display = "none";
+			player.pauseVideo();
+		}
+		
+		function onGame() {
+			document.getElementById("game").setAttribute("src", "code_art.html");
+			document.getElementById("overlayGame").style.display = "block";
+		}
+
+		function offGame() {
+    		document.getElementById("overlayGame").style.display = "none";
+		}
+		
+		function onGlitch() {
+			document.getElementById("overlayGlitch").style.display = "block";
+		}
+		
+		function offGlitch() {
+    		document.getElementById("overlayGlitch").style.display = "none";
+		}
+		
+		function onISayNo() {
+			document.getElementById("isayno").setAttribute("src", "net_art.html");
+			document.getElementById("overlayISayNo").style.display = "block";
+		}
+
+		function offISayNo() {
+    		document.getElementById("overlayISayNo").style.display = "none";
+		}
+		
 	</script>
 	
 	<footer>
