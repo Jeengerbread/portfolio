@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* CSS Document */
+* {margin:0;padding:0}
+html,body{height:100%;width:100%;}
+
+body { 
+	text-align:center;
+}
+#outer{
+	height:100%;
+	width:100%;
+	display:table;
+	vertical-align:middle;
+}
+#container {
+	text-align: center;
+	position:relative;
+	vertical-align:middle;
+	display:table-cell;
+	color: white;
+	padding-bottom:15px;
+	font-size: 64px;
+	color: white;
+	font-family: "bree", Georgia;
+	font-weight: 800; 
+}
+
+ul {
+	font-size: 28px;
+	color: white;
+	font-family: "kandal", Georgia; 
+	font-weight: 400;
+	font-style: italic; 
+}
+
+li {
+	display: inline;
+	margin: 7px;
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color .2s ease-out;
+}
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+a:hover {
+	text-decoration: none;
+	color: #bac2d1;
+	transition: color .1s ease-out;
+  -moz-transition: color .1s ease-out;
+  -webkit-transition: color .1s ease-out;
+  -o-transition: color .1s ease-out;
+}
+a:active {
+	text-decoration: none;
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media only screen and (max-device-width: 480px) {
+		div#full-screen-bg {
+		width: 400px;
+		background-image: url(odell-domes-web.png);
+		}
+		}
