@@ -43,7 +43,7 @@ main{
 	padding-bottom: 10px;
 }
 
-#overlayVideo, #overlayGame, #overlayGlitch, #overlayISayNo{
+#overlayVideo, #overlayGame, #overlayISayNo, #overlayGlitch, #overlayComposite, #overlaySound{
     position: fixed;
     display: none;
     width: 100%;
@@ -57,13 +57,23 @@ main{
     cursor: pointer;
 }
 
-#video_art, #code_art, #glitch_art, #net_art{ 
+#video_art, #code_art{
     position: absolute;
     top: 50%;
     left: 50%;
     font-size: 50px;
-    transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+#composite_art, #glitch_art, #net_art, #sound_art{ 
+	padding-top: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    -ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 }
 	
 .row {
