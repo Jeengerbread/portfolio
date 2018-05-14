@@ -91,10 +91,3 @@ a:active {
     left: -100%;
   }
 }
-
-@media only screen and (max-device-width: 480px) {
-		div#full-screen-bg {
-		width: 400px;
-		background-image: url(odell-domes-web.png);
-		}
-		}
