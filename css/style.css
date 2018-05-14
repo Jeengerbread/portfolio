@@ -36,6 +36,10 @@ header ul li a { /* for links we need additional styling */
 	text-decoration: none;
 }
 
+a:hover{
+	color: orangered;
+}
+
 main{
 	background-color: #00292B;
 	text-align: center;
